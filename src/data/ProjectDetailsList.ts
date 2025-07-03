@@ -9,7 +9,7 @@ export type ProjectDetailsProps = {
 };
 
 export const ExchangeRateProjectDetails: ProjectDetailsProps = {
-  backgroundImg: "/assets/projects/exchange-rate.png",
+  backgroundImg: "/assets/projects/exchange-rate.jpg",
   projectName: "Exchange Rate",
   mainTechs: ["React", "Tailwind", "React Table"],
   projectDetails:
