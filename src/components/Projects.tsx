@@ -2,7 +2,7 @@ import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
   // const navLogo = "/assets/zeyen-logo-larger-outline.png";
-  const exchangeRateImg = "/assets/projects/exchange-rate.png";
+  const exchangeRateImg = "/assets/projects/exchange-rate.jpg";
   const dateWithMeImg = "/assets/projects/date-with-me.png";
   const csvImg = "/assets/projects/csv-importer.jpg";
   const contextMappingImg = "/assets/projects/context-mapping.jpg";
