@@ -1,35 +1,59 @@
 @import "tailwindcss";
 
+@theme {
+  --font-mono: var(--font-jb), ui-monospace, SFMono-Regular, monospace;
+  --font-display: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif;
+
+  --color-term-bg: #0a0f0d;
+  --color-term-panel: #0b110f;
+  --color-term-panel-dark: #060a09;
+  --color-term-border: #1c2a24;
+  --color-term-border-soft: #12201b;
+  --color-term-line: #2e3f37;
+  --color-term-green: oklch(0.82 0.16 150);
+  --color-term-fg: #eef2f0;
+  --color-term-fg-soft: #cfe0d8;
+  --color-term-muted: #9fb3aa;
+  --color-term-nav: #8ba396;
+  --color-term-dim: #5c7266;
+  --color-term-hash: #6b8579;
+  --color-term-faint: #3d4f47;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 @layer base {
   body {
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide;
+    background: var(--color-term-bg);
+    color: var(--color-term-fg);
+    font-family: var(--font-mono);
+    -webkit-font-smoothing: antialiased;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    @apply font-bold;
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 
-  h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl;
+  ::selection {
+    background: oklch(0.82 0.16 150);
+    color: #0a0f0d;
   }
+}
 
-  h2 {
-    @apply text-3xl sm:text-4xl;
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
   }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
 
-  li {
-    @apply cursor-pointer;
-  }
-
-  button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white;
-  }
+.cursor-blink {
+  animation: blink 1s step-end infinite;
 }
