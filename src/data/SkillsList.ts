@@ -1,7 +1,7 @@
 import { IconType } from "react-icons";
 import {
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiJavascript,
   SiReact,
   SiNextdotjs,
@@ -27,7 +27,7 @@ type SkillsProps = {
 
 export const SkillsList: SkillsProps[] = [
   { icon: SiHtml5, color: "#E34F26", skill: "HTML", ext: ".html" },
-  { icon: SiCss3, color: "#1572B6", skill: "CSS", ext: ".css" },
+  { icon: SiCss, color: "#1572B6", skill: "CSS", ext: ".css" },
   { icon: SiJavascript, color: "#F7DF1E", skill: "JavaScript", ext: ".js" },
   { icon: SiReact, color: "#61DAFB", skill: "React", ext: ".jsx" },
   { icon: SiNextdotjs, color: "#EEF2F0", skill: "Next.js", ext: ".tsx" },
@@ -39,7 +39,6 @@ export const SkillsList: SkillsProps[] = [
   { icon: SiNodedotjs, color: "#5FA04E", skill: "NodeJs", ext: ".js" },
   { icon: SiShopify, color: "#7AB55C", skill: "Shopify", ext: "cms" },
   { icon: SiFirebase, color: "#FFCA28", skill: "Firebase", ext: "db" },
-
   { icon: SiMongodb, color: "#47A248", skill: "MongoDB", ext: "db" },
   {
     icon: SiGoogleanalytics,
