@@ -1,13 +1,11 @@
 type AboutItemsProps = string[];
 
 export const AboutItemsList: AboutItemsProps = [
-  "I am a driven frontend developer with a passion for creating engaging, user-friendly, and accessible web applications. With years of experience working in the automotive, banking, and consulting industries, I understand how to tailor solutions that meet the unique needs of each sector.",
+  "I'm a frontend developer with 5+ years building web applications across the automotive, banking, consulting, and digital entertainment industries. I'm currently at Pixent, owning frontend delivery for a customer-facing gaming platform, after shipping enterprise banking products at Deloitte for Maybank.",
 
-  "My experience in frontend development has taught me the importance of translating design mockups into responsive, accessible, and high-performing user interfaces. I have a strong understanding of HTML, CSS, and JavaScript, and am proficient in using React, Next.js, and Angular to build dynamic and functional web applications.",
+  "I turn design mockups into responsive, accessible, high-performing interfaces with React, Next.js, TypeScript, and Tailwind, and I'm comfortable owning the full frontend lifecycle: from proof-of-concept to production, reusable component libraries, and REST API integration.",
 
-  "In addition to my frontend development skills, I am familiar with Git had have experience in resolving merge conflicts and making pull requests. I am a quick learner who is always eager to explore new technologies and find solutions to complex problems.",
+  "Beyond the UI, I set up the workflow around it — GA4/GTM analytics funnels, pre-render (SSG/ISR) for performance and SEO, and pre-commit and CI gates that keep quality high. I lean on Git and AI-assisted tooling like Claude Code to move fast without cutting corners.",
 
-  "As a team player, I believe in the power of collaboration and communication. I am always open to feedback and suggestions, and enjoy working with other to create high-quality code. I am also a proactive learner who is always looking for new opportunities to grow and improve as a developer.",
-
-  "If you are in need of a frontend developer with a strong technical background, a passion for creating great user experiences, and a desire to continuosly improve, please feel free to connect with me.",
+  "I care about code quality, clear collaboration, and continuous improvement. If you're looking for a frontend developer who ships reliable UI and communicates well, let's talk.",
 ];

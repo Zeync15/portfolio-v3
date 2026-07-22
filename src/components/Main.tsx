@@ -1,103 +1,66 @@
-"use client";
+import ContactLinks from "./ContactLinks";
 
-// import { useState } from "react";
-import { AiOutlineMail } from "react-icons/ai";
-import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
+const Prompt = () => <span className="text-term-green">$</span>;
 
 const Main = () => {
-  // const [isClicked, setIsClicked] = useState(false);
-
-  const openLinkedIn = () =>
-    window.open(
-      "https://www.linkedin.com/in/chai-ze-yen/",
-      "_blank",
-      "noopener,noreferrer"
-    );
-
-  const openGitHub = () =>
-    window.open("https://github.com/Zeync15", "_blank", "noopener,noreferrer");
-
-  const openWhatsApp = () =>
-    window.open("https://wa.me/601112881135", "_blank", "noopener,noreferrer");
-
-  const openEmail = () =>
-    window.open("mailto:zeyenchai@gmail.com?subject=Enquiry&body=Hi Ze Yen,");
-
-  // const handleCopyEmail = () => {
-  //   navigator.clipboard.writeText("zeyenchai@gmail.com");
-  //   setIsClicked(true);
-  //   setTimeout(() => setIsClicked(false), 500); // 0.5 seconds
-  // };
-
   return (
-    <div id="home" className="w-full h-screen text-center">
-      <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
-        <div>
-          <h1 className="py-4 text-gray-700">
-            Hi, I&apos;m <span className="text-[#5651e5]">Chai Ze Yen</span>
-          </h1>
+    <section
+      id="home"
+      className="min-h-screen flex items-center px-8 pt-[120px] pb-20"
+    >
+      <div className="w-full max-w-[1180px] mx-auto">
+        <div className="border border-term-border rounded-2xl overflow-hidden bg-term-panel">
+          {/* window bar */}
+          <div className="h-12 flex items-center gap-[9px] px-5 border-b border-term-border">
+            <span className="w-[11px] h-[11px] rounded-full bg-term-line" />
+            <span className="w-[11px] h-[11px] rounded-full bg-term-line" />
+            <span className="w-[11px] h-[11px] rounded-full bg-term-line" />
+            <span className="ml-3 text-[12.5px] text-term-dim">
+              zeyen@portfolio: ~/home
+            </span>
+          </div>
 
-          <h1 className="py-2 text-gray-700">A Frontend Web Developer</h1>
-
-          <p className="py-4 text-gray-600 max-w-[60%] m-auto uppercase tracking-widest">
-            Let&apos;s Connect
-          </p>
-
-          <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
-            <div
-              className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
-              onClick={openLinkedIn}
-            >
-              <FaLinkedin className="h-6 w-6" />
+          {/* window body */}
+          <div className="flex flex-col gap-1 px-8 py-14 sm:px-16 sm:py-[58px]">
+            <div className="inline-flex items-center gap-[9px] border border-[#1c3a2a] bg-term-green/[0.05] rounded-full px-[15px] py-[7px] text-[12.5px] text-term-green mb-[26px] w-fit">
+              <span className="w-2 h-2 rounded-full bg-term-green" />
+              Open to the right opportunity
             </div>
 
-            <div
-              className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
-              onClick={openWhatsApp}
-            >
-              <FaWhatsapp className="h-6 w-6" />
+            <div className="text-sm text-term-dim">
+              <Prompt /> whoami
+            </div>
+            <h1 className="font-display text-5xl sm:text-[68px] font-bold leading-[1.02] tracking-[-0.02em] text-term-fg my-1">
+              Chai Ze Yen
+            </h1>
+
+            <div className="text-sm text-term-dim mt-4">
+              <Prompt /> cat role.txt
+            </div>
+            <div className="font-display text-2xl sm:text-[28px] font-medium text-term-green my-1 flex items-center">
+              Frontend Web Developer
+              <span className="cursor-blink inline-block w-[13px] h-[26px] bg-term-green ml-2 translate-y-1" />
             </div>
 
-            <div
-              className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
-              onClick={openEmail}
-            >
-              <AiOutlineMail className="h-6 w-6" />
+            <div className="text-sm text-term-dim mt-[18px]">
+              <Prompt /> cat tagline.txt
             </div>
+            <p className="font-display text-lg sm:text-[21px] font-medium text-term-fg-soft max-w-[660px] leading-[1.5] mt-1.5">
+              Building fast, accessible web interfaces for banking, fintech, and
+              digital entertainment products.
+            </p>
+            <p className="text-[13px] text-term-dim mt-3.5">
+              {"// "}React · Next.js · TypeScript — 5 yrs across automotive,
+              banking, consulting &amp; entertainment
+            </p>
 
-            <div
-              className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
-              onClick={openGitHub}
-            >
-              <FaGithub className="h-6 w-6" />
+            <div className="mt-10">
+              <ContactLinks />
             </div>
-
-            {/* <div className="relative group">
-              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 ">
-                <AiOutlineMail className="h-6 w-6" />
-              </div>
-
-              <div
-                className="absolute left-1/2 -top-8 transform -translate-x-1/2 bg-gray-800 text-white
-                text-xs p-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap cursor-pointer"
-                onClick={handleCopyEmail}
-              >
-                {isClicked ? "Copied!" : "zeyenchai@gmail.com"}
-              </div>
-            </div> */}
-
-            {/* <Link
-              href="mailto:zeyenchai@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
-            >
-              Chat on email
-            </Link> */}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
