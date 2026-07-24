@@ -17,43 +17,56 @@ export const ExperienceItemsList: ExperienceItemsProps[] = [
     duration: "December 2025 - Present",
     projects: [
       {
-        projectName: "Player Platform & Game Launch",
+        projectName: "Consumer Platform",
         projectDetails: [
-          "Own frontend delivery for the customer-facing platform of a digital entertainment and online gaming product",
-          "Designed and shipped mini player and picture-in-picture playback, keeping game sessions alive while users browse the rest of the catalogue",
-          "Built the KYC verification module end to end, gating promotions, deposits, and withdrawals behind a verified identity check",
-          "Drove the responsive and multi-language implementation across desktop and mobile breakpoints",
-          "Established a shared component layer that removed duplicated UI patterns across the platform",
+          "Own frontend delivery across 4 applications — 2 consumer platforms, a partner portal, and a CMS — as 1 of 5 developers under a team lead",
+          "Building mini player and picture-in-picture playback for a new platform release, keeping sessions alive while users browse the catalogue",
+          "Drove the responsive implementation across desktop and mobile breakpoints and localised the interface for 3 languages",
+          "Partnered with the product designer to define a shared design system, then enforced it in code as a single token set for colour, buttons, and alerts",
+          "Reconciled inconsistencies in design handoff, flagging one-off colour values so components stayed on the system rather than drifting per screen",
         ],
       },
       {
-        projectName: "Affiliate Portal",
+        projectName: "Identity Verification (KYC)",
         projectDetails: [
-          "Delivered the affiliate dashboard for referral tracking and partner performance reporting",
+          "Built the KYC verification module end to end, gating account features and fund movement behind a verified bank identity",
+          "Modelled the journey as a resumable 8-screen flow — verification status checked at the profile level, conditional mobile registration with OTP, bank detail submission, admin review, and a final amount challenge",
+          "Handled the asynchronous approval step, holding users in a pending state that survives reload and returns them to the correct stage on re-entry",
+          "Implemented the secondary verification challenge, matching the actual received amount against withdrawal plus additional funds, with attempt limiting and distinct success and failure terminal states",
+          "Designed an inline worked example alongside the challenge to reduce failed submissions on a step users only get a limited number of attempts at",
+        ],
+      },
+      {
+        projectName: "Web Performance & Analytics",
+        projectDetails: [
+          "Introduced the first analytics coverage on a platform that had none, scoping and implementing GA4 through GTM at the CTO's request",
+          "Defined the event schema for the full conversion funnel — homepage view, register click, signup completion, first deposit, session start and completion, reward redemption",
+          "Attached content identifier and session parameters to launch events so most-engaged titles and drop-off points become answerable questions",
+          "Authored a setup and handover guide so the incoming owner could migrate from my temporary test property to the company account",
+          "Applying pre-rendering (SSG / ISR) to marketing and landing pages to improve first paint and crawlability",
+        ],
+      },
+      {
+        projectName: "Engineering Workflow & AI-Assisted Development",
+        projectDetails: [
+          "Introduced a pre-push hook enforcing lint compliance locally, so issues are resolved before they ever reach the remote branch or CI",
+          "Extended the hook to generate currency icons from web3icons into public assets, covering all 5 supported currencies and closing a class of missing-asset bugs whenever a new one is added",
+          "Shipped the hooks as part of the repository, giving all 5 developers the same checks by default with no per-developer setup",
+          "Use Claude Code as a standing review step before every commit, and to reconcile upstream changes against in-flight work after pulling",
+        ],
+      },
+      {
+        projectName: "Partner Portal",
+        projectDetails: [
+          "Delivered the partner dashboard for referral tracking and performance reporting",
           "Designed the data table, filtering, and export layer handling commission and campaign statistics",
         ],
       },
       {
         projectName: "Content Management System",
         projectDetails: [
-          "Operate the CMS behind live promotions, publishing campaign content to the player platform",
+          "Operate the CMS behind live campaigns, publishing promotional content to the consumer platform",
           "Extended user records with KYC status filtering to support day-to-day operational checks",
-        ],
-      },
-      {
-        projectName: "Web Performance & Analytics",
-        projectDetails: [
-          "Instrumented Google Analytics 4 via GTM, defining the event schema for the full player funnel — homepage view, register click, signup completion, deposit, game start and finish, and bonus claim",
-          "Attached game identifier and session parameters to launch events, surfacing most-played titles and drop-off points for the content team",
-          "Applied pre-rendering (SSG / ISR) to marketing and landing pages, improving first paint and SEO crawlability",
-        ],
-      },
-      {
-        projectName: "Engineering Workflow & AI-Assisted Development",
-        projectDetails: [
-          "Diagnosed and resolved rebase conflicts, malformed commit history, and branch divergence across parallel feature work",
-          "Introduced pre-commit and pre-push gates (lint, type-check, tests, conventional commits) that catch failures before they reach CI",
-          "Use Claude Code as a working tool for refactors, review, and reasoning through unfamiliar parts of the codebase",
         ],
       },
     ],
