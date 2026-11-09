@@ -12,7 +12,7 @@ type ExperienceItemsProps = {
 export const ExperienceItemsList: ExperienceItemsProps[] = [
   {
     hash: "a4f1c9e",
-    company: "Pixent Technologies Sdn. Bhd.",
+    company: "Primitive Technology Sdn. Bhd.",
     position: "Frontend Developer",
     duration: "December 2025 - Present",
     projects: [
@@ -20,39 +20,80 @@ export const ExperienceItemsList: ExperienceItemsProps[] = [
         projectName: "Consumer Platform",
         projectDetails: [
           "Own frontend delivery across 4 applications — 2 consumer platforms, a partner portal, and a CMS — as 1 of 5 developers under a team lead",
-          "Building mini player and picture-in-picture playback for a new platform release, keeping sessions alive while users browse the catalogue",
-          "Drove the responsive implementation across desktop and mobile breakpoints and localised the interface for 3 languages",
-          "Partnered with the product designer to define a shared design system, then enforced it in code as a single token set for colour, buttons, and alerts",
-          "Reconciled inconsistencies in design handoff, flagging one-off colour values so components stayed on the system rather than drifting per screen",
+          "Merged 267 pull requests in six months, about a third of the team's frontend output",
+          "Built on React 19, TypeScript, Tailwind v4, TanStack Query and Zustand in a multi-brand Turborepo monorepo",
+          "Partnered with the product designer on a shared design system, enforced in code as one token set for colour, buttons, and alerts",
+        ],
+      },
+      {
+        projectName: "Content Discovery & Player",
+        projectDetails: [
+          "Built the catalogue home, in-place search, and category, provider and theme pages on live APIs",
+          "Built a live activity feed over server-sent events, highlighting each new entry as it arrives",
+          "Built mini player and picture-in-picture playback, keeping sessions alive while users browse the catalogue",
+          "Let guests try content in demo mode, and let a second browser tab reuse a live session",
+        ],
+      },
+      {
+        projectName: "Authentication & Account Security",
+        projectDetails: [
+          "Rebuilt every sign-in dialog on one shared shell: a split layout on desktop, a bottom sheet on mobile",
+          "Supported email or username, social, Telegram and wallet sign-in, with inline errors mapped from backend codes",
+          "Built email verification with a resend countdown, gating payments until it is done",
+          "Added two-factor authentication setup and reset, phone verification, and 2FA before a new payout address is saved",
         ],
       },
       {
         projectName: "Identity Verification (KYC)",
         projectDetails: [
-          "Built the KYC verification module end to end, gating account features and fund movement behind a verified bank identity",
-          "Modelled the journey as a resumable 8-screen flow — verification status checked at the profile level, conditional mobile registration with OTP, bank detail submission, admin review, and a final amount challenge",
-          "Handled the asynchronous approval step, holding users in a pending state that survives reload and returns them to the correct stage on re-entry",
-          "Implemented the secondary verification challenge, matching the actual received amount against withdrawal plus additional funds, with attempt limiting and distinct success and failure terminal states",
-          "Designed an inline worked example alongside the challenge to reduce failed submissions on a step users only get a limited number of attempts at",
+          "Platform A — in-house flow: built the KYC module end to end as a resumable 8-screen flow — profile-level status checks, conditional mobile registration with OTP, bank detail submission, admin review, and a final amount challenge",
+          "Held users in a pending state that survives reload and returns them to the correct stage on re-entry",
+          "Platform B — Sumsub: integrated Sumsub's identity verification SDK, loaded only when opened, with tokens issued and refreshed by the backend and the result trusted only from Sumsub's server-side webhook",
+          "Reused Sumsub's face check as the identity step for resetting 2FA, and ran the flow full-screen on phones in the user's own language",
+        ],
+      },
+      {
+        projectName: "Account Hub & Rewards",
+        projectDetails: [
+          "Built the account hub — overview, wallet, transactions and settings — with filtered history, paging and Excel export",
+          "Built the loyalty, rewards and referral pages, with claiming wired to the backend",
+          "Built public profiles that follow each user's privacy settings",
+        ],
+      },
+      {
+        projectName: "Localisation — 21 Languages",
+        projectDetails: [
+          "Took the platform from 4 to 21 languages, including right-to-left Arabic",
+          "Added fonts for Arabic, Thai, Hindi and Cyrillic that download only when needed, and loaded each language as its own bundle",
+          "Moved translations to a Google Sheet the product team edits, with a sync that refuses broken placeholders",
+          "Found 283 strings that never reached translators, and fixed translated text overflowing its layout",
         ],
       },
       {
         projectName: "Web Performance & Analytics",
         projectDetails: [
-          "Introduced the first analytics coverage on a platform that had none, scoping and implementing GA4 through GTM at the CTO's request",
-          "Defined the event schema for the full conversion funnel — homepage view, register click, signup completion, first deposit, session start and completion, reward redemption",
-          "Attached content identifier and session parameters to launch events so most-engaged titles and drop-off points become answerable questions",
-          "Authored a setup and handover guide so the incoming owner could migrate from my temporary test property to the company account",
-          "Applying pre-rendering (SSG / ISR) to marketing and landing pages to improve first paint and crawlability",
+          "Introduced the first analytics coverage on a platform that had none, implementing GA4 through GTM",
+          "Defined the event schema for the full conversion funnel, from homepage view to signup and first purchase",
+          "Added Consent Mode v2 by region, and kept sign-in and reset tokens out of every URL sent to Google",
+          "Generated the GTM container from the app's own event list, and wrote a handover guide for the next owner",
         ],
       },
       {
-        projectName: "Engineering Workflow & AI-Assisted Development",
+        projectName: "AI-Assisted Delivery Workflows",
         projectDetails: [
-          "Introduced a pre-push hook enforcing lint compliance locally, so issues are resolved before they ever reach the remote branch or CI",
-          "Extended the hook to generate currency icons from web3icons into public assets, covering all 5 supported currencies and closing a class of missing-asset bugs whenever a new one is added",
-          "Shipped the hooks as part of the repository, giving all 5 developers the same checks by default with no per-developer setup",
-          "Use Claude Code as a standing review step before every commit, and to reconcile upstream changes against in-flight work after pulling",
+          "Ran ticket and QA-defect work through Claude Code workflows: claimed from a shared sheet, built in its own git worktree, opened as a pull request, and checked in a real browser with screenshots",
+          "Automated design checks that compare code against Figma for spacing, colour and radius",
+          "Automated text-overflow audits at 8 screen widths, proving each fix by re-running the audit",
+          "Ran an API contract test across every endpoint, reporting what changed since the last run",
+          "Kept a person between finding and fixing — tools file tickets, people review them, nothing merges itself",
+        ],
+      },
+      {
+        projectName: "Engineering Workflow",
+        projectDetails: [
+          "Shipped git hooks that give all 5 developers the same formatting, lint and type checks with no setup",
+          "Extended them to generate currency icons and flag new text for translation",
+          "Ran a security pass that stopped mock data reaching production and closed client-side data leaks",
         ],
       },
       {

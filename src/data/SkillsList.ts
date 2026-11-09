@@ -16,6 +16,11 @@ import {
   SiGoogleanalytics,
   SiGoogletagmanager,
   SiGit,
+  SiTypescript,
+  SiReactquery,
+  SiVitest,
+  SiFigma,
+  SiClaude,
 } from "react-icons/si";
 
 type SkillsProps = {
@@ -29,11 +34,21 @@ export const SkillsList: SkillsProps[] = [
   { icon: SiHtml5, color: "#E34F26", skill: "HTML", ext: ".html" },
   { icon: SiCss, color: "#1572B6", skill: "CSS", ext: ".css" },
   { icon: SiJavascript, color: "#F7DF1E", skill: "JavaScript", ext: ".js" },
+  { icon: SiTypescript, color: "#3178C6", skill: "TypeScript", ext: ".ts" },
   { icon: SiReact, color: "#61DAFB", skill: "React", ext: ".jsx" },
   { icon: SiNextdotjs, color: "#EEF2F0", skill: "Next.js", ext: ".tsx" },
   { icon: SiGit, color: "#F05032", skill: "Git", ext: "vcs" },
   { icon: SiVite, color: "#646CFF", skill: "Vite", ext: "build" },
   { icon: SiTailwindcss, color: "#06B6D4", skill: "Tailwind", ext: ".css" },
+  {
+    icon: SiReactquery,
+    color: "#FF4154",
+    skill: "TanStack Query",
+    ext: "data",
+  },
+  { icon: SiVitest, color: "#6E9F18", skill: "Vitest", ext: "test" },
+  { icon: SiFigma, color: "#F24E1E", skill: "Figma", ext: "design" },
+  { icon: SiClaude, color: "#D97757", skill: "Claude Code", ext: "ai" },
   { icon: SiShadcnui, color: "#EEF2F0", skill: "shadcn/ui", ext: "ui" },
   { icon: SiAntdesign, color: "#0170FE", skill: "Ant Design", ext: "ui" },
   { icon: SiNodedotjs, color: "#5FA04E", skill: "NodeJs", ext: ".js" },
